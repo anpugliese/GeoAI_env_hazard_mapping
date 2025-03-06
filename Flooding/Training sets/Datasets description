@@ -1,0 +1,13 @@
+flood_training: training set with 100k flooded points with all the past events
+
+flood_training_2000: training set with 10k flooded points with events after 2000 
+
+flood_training_2014: training set with 10k flooded points with events after 2014 
+
+flood_training_200_100k: training set with 100k flooded points with events after 2000
+
+flood_training_cf_year_2000: training set with 10k flooded points with events after 2000 and conditioning factors (ndvi and land cover) selected based on the year of the event
+
+flood_training_cf_year_no_water: training set with 10k flooded points with events after 2000 and conditioning factors (ndvi and land cover) selected based on the year of the event. Additionally to the normal distance from water criteria, the selected points must have dusaf values different from [5*]
+
+flood_training_cf_year_no_river_bed: training set with 10k flooded points with events after 2000 and conditioning factors (ndvi and land cover) selected based on the year of the event. Additionally to the normal distance from water criteria, the selected points must have dusaf values different from [5*, 331, 3222]

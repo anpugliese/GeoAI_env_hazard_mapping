@@ -1,0 +1,15 @@
+Process to remove areas covered by water (based on land cover) or river beds from the susceptibility rasters.
+
+
+Run the following command in QGIS default raster calculator (correctly aligned dusaf is in the folder ODC_harmonia/Jupyter, substitute "probability_raster" with the susceptibility raster).
+
+("dusaf@1"!=511  AND  "dusaf@1"!=5121  AND "dusaf@1"!=5122  AND "dusaf@1"!=5123)*"probability_raster" + ("dusaf@1"=511  OR  "dusaf@1"=5121  OR "dusaf@1"=5122  OR "dusaf@1"=5123) * -999
+
+To remove river beds as well run the following command instead of the previous one:
+
+("dusaf@1"!=511  AND  "dusaf@1"!=5121  AND "dusaf@1"!=5122  AND "dusaf@1"!=5123  AND "dusaf@1"!=331 AND "dusaf@1"!=3222 )* "probability_raster" + ("dusaf@1"=511  OR  "dusaf@1"=5121  OR "dusaf@1"=5122  OR "dusaf@1"=5123 OR "dusaf@1"=331 OR "dusaf@1"=3222) * -999
+
+
+The output raster will have -999 value in water areas. To completely remove those values and set them to no data run the following command in raster calculator:
+
+(("Output@1">=0)*"Output@1") / (("Output@1">=0)*1 + ("Output@1"<0)*0)

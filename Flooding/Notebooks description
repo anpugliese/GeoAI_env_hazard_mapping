@@ -1,0 +1,9 @@
+Flooding_training_data: creation of training datasets for flooding
+
+Model training: fitting of the model and prediction of the probabilities for the entire area
+
+rasterize_probability: transform the probability dataframe to raster
+
+test_feature_selection: feature selection tests on the different models with filter methods and correlation checks
+
+Visualization notebooks: different examples on how to use Geoviews, Datashader, and Panels

@@ -1,0 +1,47 @@
+#AIR POLLUTION
+
+#Ignore air pollution backup
+Air_Pollution/MILANO/back_up/
+Air_Pollution/MILANO/data/back_up/
+Air_Pollution/MILANO/data/milano_pollutant_data
+
+#Ignore stations processed data
+Air_Pollution/MILANO/data/*
+Air_Pollution/MILANO/data/
+
+#Ignore air pollution CSV predictions, raster files are available with the same content
+Air_Pollution/MILANO/best_model/predictions
+
+#Ignore raster aux files
+Air_Pollution/MILANO/best_model/predictions/*.aux.xml
+
+#Ignore air pollution processor as the each pollutant processing data and results is around 6GB
+Air_Pollution/MILANO/harmonia_processor
+
+
+#URBAN HEAT ISLAND
+
+#Ignore auxiliar data totalling 1.7GB
+UHI/MILANO/data
+
+#Ignore CSV predictions
+UHI/MILANO/predictions
+
+#Ignore raster predictions 6GB
+UHI/MILANO/rasters 
+
+#Ignore training samples 11.5GB
+UHI/MILANO/training_samples
+
+#Ignore any numpy and pickle object
+UHI/MILANO/*.npy
+UHI/MILANO/*.pkl
+
+#FLOODS
+#Ignoring data (1GB), maps (2.8GB), and predictions (1.6GB)
+
+Flooding/data
+
+Flooding/Maps
+
+Flooding/predictions
